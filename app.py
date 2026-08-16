@@ -325,7 +325,7 @@ elif menu_choice == "📅 Attendance Tracking":
                 st.write(f"**{row['roll_no']}** - {row['name']}")
             with c_status:
                 attendance_data[row['roll_no']] = st.radio(
-                    "Status", ["Present", "Absent"], key=f"att_{row['roll_no']}", inline=True
+                    "Status", ["Present", "Absent"], key=f"att_{row['roll_no']}", horizontal=True, label_visibility="collapsed"
                 )
         
         if st.button("Save Batch Attendance", type="primary"):
